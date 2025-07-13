@@ -1,0 +1,11 @@
+CreateMenu
+SetMenu
+RemoveMenu
+GetSubMenu
+AppendMenu
+EnableMenuItem
+CheckMenuRadioItem
+DrawMenuBar
+GetMenuString
+ModifyMenu
+GetSystemMenu
