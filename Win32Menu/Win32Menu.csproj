@@ -4,7 +4,34 @@
         <TargetFramework>net9.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Title>Win32Menu</Title>
+        <Authors>AuthorZiXi</Authors>
+        <Description>Highly encapsulated Win32 native menu implementation</Description>
+        <Copyright>Copyright (c) 2025 AuthorZiXi . MIT License</Copyright>
+        <PackageProjectUrl>https://github.com/AuthorZiXi/Win32Menu</PackageProjectUrl>
+        <PackageIcon>package_icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>Win32;Menu;Encapsulation;Windows</PackageTags>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+        <IncludeSymbols>False</IncludeSymbols>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\LICENSE.txt">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\package_icon.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.183">
