@@ -9,13 +9,19 @@
         <Authors>AuthorZiXi</Authors>
         <Description>Highly encapsulated Win32 native menu implementation</Description>
         <Copyright>Copyright (c) 2025 AuthorZiXi . MIT License</Copyright>
-        <PackageProjectUrl>https://github.com/AuthorZiXi/Win32Menu</PackageProjectUrl>
+        <PackageProjectUrl></PackageProjectUrl>
         <PackageIcon>package_icon.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>Win32;Menu;Encapsulation;Windows</PackageTags>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-        <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
         <IncludeSymbols>False</IncludeSymbols>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <RepositoryUrl>https://github.com/AuthorZiXi/Win32Menu</RepositoryUrl>
+        <PackageReleaseNotes>fixed xml doc</PackageReleaseNotes>
+        <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <FileVersion>1.0.1.0</FileVersion>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>

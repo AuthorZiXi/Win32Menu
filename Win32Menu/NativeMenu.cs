@@ -10,6 +10,10 @@ namespace Win32Menu;
 /// </summary>
 public class NativeMenu : IDisposable
 {
+    /// <summary>
+    /// 创建原生菜单
+    /// </summary>
+    /// <exception cref="Win32Exception">创建失败</exception>
     public NativeMenu()
     {
         hMenu = PInvoke.CreateMenu();
@@ -260,9 +264,13 @@ public class NativeMenu : IDisposable
             systemMenu = null;
         }
     }
-    
+    /// <summary>
+    /// 是否已经挂载到系统菜单
+    /// </summary>
     public bool IsSystemMenu => systemMenu is not null;
-    
+    /// <summary>
+    /// 销毁菜单
+    /// </summary>
     public void Dispose()
     {
         PInvoke.DestroyMenu(hMenu);
@@ -270,24 +278,59 @@ public class NativeMenu : IDisposable
     }
 }
 
+/// <summary>
+/// 窗口信息类型
+/// </summary>
 public enum WndProcMsgType
 {
+    /// <summary>
+    /// 菜单命令(通常不需要使用这个)
+    /// </summary>
     WmMenuCommand = 0x0126,
+    /// <summary>
+    /// 菜单命令(如果挂载到窗口上请这么使用)
+    /// </summary>
     WmCommand = 0x0111,
+    /// <summary>
+    /// 菜单命令(挂载到系统菜单上请使用这个)
+    /// </summary>
     WmSystemCommand = 0x0112,
 }
-
+/// <summary>
+/// 菜单状态
+/// </summary>
 public enum MenuStatus
 {
+    /// <summary>
+    /// 启用
+    /// </summary>
     Enabled,
+    /// <summary>
+    /// 禁用
+    /// </summary>
     Disabled
 }
+/// <summary>
+/// 菜单类型
+/// </summary>
 public enum MenuType
 {
+    /// <summary>
+    /// 字符串
+    /// </summary>
     String,
-    //RadioCheck,
+    //RadioCheck,这个已变成一个bool属性了
+    /// <summary>
+    /// 分隔符
+    /// </summary>
     Separator,
+    /// <summary>
+    /// 新行中或弹出菜单的新列中放置菜单项(一般用不到)
+    /// </summary>
     MenuBarBreak,
+    /// <summary>
+    /// 新行中或弹出菜单的新列中放置菜单项(一般用不到)
+    /// </summary>
     MenuBreak
 }
 /// <summary>
